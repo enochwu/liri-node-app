@@ -85,8 +85,6 @@ function nameSong() {
 
 function showMovie() {
 
-  var movieQuery = process.argv[3];
-
   var OmdbApi = require('omdb-api-pt')
   var key = require('./okeys.js');
   var omdb = new OmdbApi(key);
@@ -223,6 +221,30 @@ function doWhat() {
 
 }
 
+function helper() {
+
+  console.log('\n----------------------');
+  console.log('Hi this is LIRI, your somewhat intellegent assistant for finding tweets, songs and movies.\n');
+
+  console.log('To get started type the following to get results:\n');
+
+  console.log('For tweets:\r');
+  console.log('node liri.js my-tweets\n');
+
+  console.log('For song info:\r');
+  console.log('node liri.js spotify-this-song \'Song Title and/or Band\'\n');
+
+  console.log('For movie info:\r');
+  console.log('node liri.js movie-this \'Movie Title\'\n');
+
+  console.log('You may also add arguments to the included text file to run in node.\n');
+
+  console.log('To run arguments from the text file:\r');
+  console.log('node liri.js do-what-it-says');
+  console.log('----------------------\n');
+
+}
+
 switch (cmd) {
   case 'my-tweets':
     tweetList()
@@ -238,6 +260,10 @@ switch (cmd) {
   case 'do-what-it-says':
     doWhat();
     break;
+  case undefined:
+    helper();
+    break;
   default:
     console.log('Sorry, I dont understand the command ' + cmd + '.');
+    break;
 }
