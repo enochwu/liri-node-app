@@ -199,22 +199,24 @@ function doWhat() {
 
     var output = data.split(",");
 
-    var inputCmd = output[0];
-
-    switch (inputCmd) {
-      case 'my-tweets':
-        tweetList()
-        break;
-      case 'spotify-this-song':
-        songQuery = output[1];
-        nameSong();
-        break;
-      case 'movie-this':
-        movieQuery = output[1];
-        showMovie();
-        break;
-      default:
-        console.log('Sorry, I didn\'t see an values in your text file.');
+    for (var i = 0; i < output.length; i++) {
+      switch (output[i]) {
+        case 'my-tweets':
+          tweetList()
+          break;
+        case 'spotify-this-song':
+          songQuery = output[i+1];
+          nameSong();
+          break;
+        case 'movie-this':
+          movieQuery = output[i+1];
+          showMovie();
+          break;
+        case '':
+          console.log('There is no item here or your text file is blank');
+        // default:
+        //   console.log('Sorry, I didn\'t see an values in your text file.');
+      }
     }
 
   });
@@ -237,7 +239,8 @@ function helper() {
   console.log('For movie info:\r');
   console.log('node liri.js movie-this \'Movie Title\'\n');
 
-  console.log('You may also add arguments to the included text file to run in node.\n');
+  console.log('You may also add arguments to the included text file to run in node.');
+  console.log('Please separate items with a comma.\n');
 
   console.log('To run arguments from the text file:\r');
   console.log('node liri.js do-what-it-says');
