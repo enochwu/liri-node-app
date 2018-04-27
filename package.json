@@ -18,6 +18,7 @@
   "homepage": "https://github.com/enochwu/liri-node-app#readme",
   "dependencies": {
     "fs": "0.0.1-security",
+    "hoek": "^5.0.3",
     "node-spotify-api": "^1.0.7",
     "omdb-api-pt": "^2.0.1",
     "rcb-omdb": "^0.5.2",
