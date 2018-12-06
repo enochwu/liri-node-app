@@ -1,7 +1,7 @@
 {
   "name": "liri-node-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A node application",
   "main": "liri.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +20,7 @@
     "fs": "0.0.1-security",
     "hoek": "^5.0.3",
     "node-spotify-api": "^1.0.7",
+    "npm": "^6.4.1",
     "omdb-api-pt": "^2.0.1",
     "rcb-omdb": "^0.5.2",
     "request": "^2.83.0",
