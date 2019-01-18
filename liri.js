@@ -8,6 +8,7 @@ function tweetList() {
   var client = new Twitter(key);
 
   console.log('Recent tweets from devnoch: \n');
+  console.log('-----------------' + "\n");
 
   var params = {
     screen_name: 'devnoch',
@@ -21,6 +22,7 @@ function tweetList() {
         var tweetBody = tweets[i].text;
         var output = JSON.stringify(tweetBody, null, 4);
         console.log(output + "\n");
+        console.log('-----------------' + "\n");
       }
     }
   });
