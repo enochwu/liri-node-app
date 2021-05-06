@@ -20,7 +20,7 @@
     "deep-extend": "^0.6.0",
     "fs": "0.0.1-security",
     "hoek": "^5.0.4",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.21",
     "node-spotify-api": "^1.1.1",
     "nodemon": "^1.19.1",
     "npm": "^6.10.1",
